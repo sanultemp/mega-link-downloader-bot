@@ -287,13 +287,6 @@ async def mega_dl(bot, update):
                     except Exception as e:
                         logger.info(e)
                         return
-        else:
-            await bot.send_message(
-                chat_id=update.chat.id,
-                text=f"""Sorry! Folder links are not supported!""",
-                reply_to_message_id=update.message_id
-            )
-            return
     else:
         await bot.send_message(
             chat_id=update.chat.id,
